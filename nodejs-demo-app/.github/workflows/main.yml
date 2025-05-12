@@ -16,3 +16,8 @@ jobs:
         run: npm install 
       - name: Run tests 
         run: npm test 
+      - name: Log in to Docker Hub 
+      - name: Build Docker Image 
+        run: docker build -t harshsingh0509/nodejs-demo-app . 
+      - name: Push Docker Image 
+        run: docker push harshsingh0509/nodejs-demo-app 
